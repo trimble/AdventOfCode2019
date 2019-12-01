@@ -13,8 +13,9 @@ def calc_total_fuel_needed_for_mass(mass):
     fuel_mass = calc_fuel_needed_for_mass(fuel_mass)
   return total_fuel
 
-fuels = map(calc_fuel_needed_for_mass, module_masses)
-print(f"The fuel needed to lift the modules is {sum(fuels)}.")
+if __name__ == '__main__':
+  fuels = map(calc_fuel_needed_for_mass, module_masses)
+  print(f"The fuel needed to lift the modules is {sum(fuels)}.")
 
-total_fuels = map(calc_total_fuel_needed_for_mass, module_masses)
-print(f"The total fuel needed to lift the modules and fuel is {sum(total_fuels)}.")
+  total_fuels = map(calc_total_fuel_needed_for_mass, module_masses)
+  print(f"The total fuel needed to lift the modules and fuel is {sum(total_fuels)}.")
